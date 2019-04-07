@@ -158,6 +158,8 @@ ClientBin/
 *.dbproj.schemaview
 *.pfx
 *.publishsettings
+*.ide*
+*.lock
 node_modules/
 
 # RIA/Silverlight projects
@@ -183,4 +185,3 @@ UpgradeLog*.htm
 # Microsoft Fakes
 FakesAssemblies/
 /.vs
-/src/Unit-1/DoThis/.vs/WinTail/v15/Server/sqlite3
