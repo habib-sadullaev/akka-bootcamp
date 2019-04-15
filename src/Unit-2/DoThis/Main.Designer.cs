@@ -28,48 +28,72 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.sysChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.button1 = new System.Windows.Forms.Button();
+            this.cpuButton = new System.Windows.Forms.Button();
+            this.memoryButton = new System.Windows.Forms.Button();
+            this.diskButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.sysChart)).BeginInit();
             this.SuspendLayout();
             // 
             // sysChart
             // 
-            chartArea3.Name = "ChartArea1";
-            this.sysChart.ChartAreas.Add(chartArea3);
+            chartArea5.Name = "ChartArea1";
+            this.sysChart.ChartAreas.Add(chartArea5);
             this.sysChart.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend3.Name = "Legend1";
-            this.sysChart.Legends.Add(legend3);
+            legend5.Name = "Legend1";
+            this.sysChart.Legends.Add(legend5);
             this.sysChart.Location = new System.Drawing.Point(0, 0);
             this.sysChart.Margin = new System.Windows.Forms.Padding(4);
             this.sysChart.Name = "sysChart";
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.sysChart.Series.Add(series3);
+            series5.ChartArea = "ChartArea1";
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            this.sysChart.Series.Add(series5);
             this.sysChart.Size = new System.Drawing.Size(912, 549);
             this.sysChart.TabIndex = 0;
             this.sysChart.Text = "sysChart";
             // 
-            // button1
+            // cpuButton
             // 
-            this.button1.Location = new System.Drawing.Point(783, 462);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(97, 33);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Add Series";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            this.cpuButton.Location = new System.Drawing.Point(763, 284);
+            this.cpuButton.Name = "cpuButton";
+            this.cpuButton.Size = new System.Drawing.Size(125, 63);
+            this.cpuButton.TabIndex = 1;
+            this.cpuButton.Text = "CPU (ON)";
+            this.cpuButton.UseVisualStyleBackColor = true;
+            this.cpuButton.Click += new System.EventHandler(this.CpuButton_Click);
+            // 
+            // memoryButton
+            // 
+            this.memoryButton.Location = new System.Drawing.Point(763, 369);
+            this.memoryButton.Name = "memoryButton";
+            this.memoryButton.Size = new System.Drawing.Size(125, 63);
+            this.memoryButton.TabIndex = 2;
+            this.memoryButton.Text = "MEMORY (OFF)";
+            this.memoryButton.UseVisualStyleBackColor = true;
+            this.memoryButton.Click += new System.EventHandler(this.MemoryButton_Click);
+            // 
+            // diskButton
+            // 
+            this.diskButton.Location = new System.Drawing.Point(763, 452);
+            this.diskButton.Name = "diskButton";
+            this.diskButton.Size = new System.Drawing.Size(125, 63);
+            this.diskButton.TabIndex = 3;
+            this.diskButton.Text = "DISK (OFF)";
+            this.diskButton.UseVisualStyleBackColor = true;
+            this.diskButton.Click += new System.EventHandler(this.DiskButton_Click);
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(912, 549);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.diskButton);
+            this.Controls.Add(this.memoryButton);
+            this.Controls.Add(this.cpuButton);
             this.Controls.Add(this.sysChart);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Main";
@@ -84,7 +108,9 @@
         #endregion
 
         private System.Windows.Forms.DataVisualization.Charting.Chart sysChart;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button cpuButton;
+        private System.Windows.Forms.Button memoryButton;
+        private System.Windows.Forms.Button diskButton;
     }
 }
 
